@@ -6,7 +6,7 @@
  * @param VariableID
  * @text Variable ID
  * @type variable
- * @desc The game variable to display in the window.
+ * @desc The variable to display in the window.
  * @default 1
  *
  */
@@ -14,7 +14,7 @@
 (() => {
     'use strict'
     
-    const PARAMETERS = PluginManager.parameters("ZEM_VariableWindow");
+    const PARAMETERS = PluginManager.parameters("ZEM_BattleVariableWindow");
     const variableId = Number(PARAMETERS["VariableID"] || 1);
 
     class Window_BattleVariable extends Window_Base {
