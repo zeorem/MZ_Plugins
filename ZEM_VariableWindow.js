@@ -12,10 +12,11 @@
  */
 
 (() => {
-    const parameters = PluginManager.parameters("ZEM_VariableWindow");
-    const variableId = Number(parameters["VariableID"] || 1);
+    'use strict'
+    
+    const PARAMETERS = PluginManager.parameters("ZEM_VariableWindow");
+    const variableId = Number(PARAMETERS["VariableID"] || 1);
 
-    // Create a new window class
     class Window_BattleVariable extends Window_Base {
         constructor(rect) {
             super(rect);
@@ -29,8 +30,7 @@
             this.drawIcon(303, 0, 0);
         }
     }
-
-    // Add the window to the battle scene
+    
     const ZEM_VW_Scene_Battle_createAllWindows = Scene_Battle.prototype.createAllWindows;
     Scene_Battle.prototype.createAllWindows = function() {
         ZEM_VW_Scene_Battle_createAllWindows.call(this);
