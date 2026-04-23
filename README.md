@@ -1,1 +1,1 @@
-Experimental javascript plugins made for RPG Maker MZ.
+A collection of my javascript plugins made for RPG Maker MZ.
